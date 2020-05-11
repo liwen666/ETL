@@ -1,0 +1,52 @@
+
+
+create table public.ods_anytxn_bm_acct_delq
+(
+	txa_number varchar(32) not null,
+	txn_organization_id varchar(4) default NULL::character varying,
+	txa_type varchar(2) default NULL::character varying,
+	txa_status varchar(1) default NULL::character varying,
+	txn_cust_number varchar(32) default NULL::character varying,
+	txn_plastic_number varchar(19) default NULL::character varying,
+	txn_system_date timestamp,
+	txn_effective_currency varchar(3) default NULL::character varying,
+	txn_orig_txa_number varchar(32) default NULL::character varying,
+	txn_parent_txa_number varchar(32) default NULL::character varying,
+	txn_create_date timestamp not null,
+	txn_late_charge_feetableid varchar(6) default NULL::character varying,
+	pro_cd varchar(6) default NULL::character varying,
+	product_code varchar(32) default NULL::character varying,
+	txn_orig_txa_type varchar(2) default NULL::character varying,
+	txn_parent_txa_type varchar(2) default NULL::character varying,
+	txn_connect_txa_number varchar(32) default NULL::character varying,
+	txn_connect_txa_type varchar(2) default NULL::character varying,
+	delq_date date,
+	delq_last_cycle_due integer,
+	delq_cycle_due integer,
+	delq_highest_cycle_due integer,
+	delq_total_amount_due numeric(11,2),
+	delq_current_due numeric(11,2),
+	delq_past_due numeric(11,2),
+	delq_30days_delq numeric(11,2),
+	delq_60days_delq numeric(11,2),
+	delq_90days_delq numeric(11,2),
+	delq_120days_delq numeric(11,2),
+	delq_150days_delq numeric(11,2),
+	delq_180days_delq numeric(11,2),
+	delq_210days_delq numeric(11,2),
+	delq_process_table varchar(6) default NULL::character varying,
+	loan_order_number varchar(32) default NULL::character varying,
+	loan_billing_tenor integer,
+	fus_id varchar(4) default NULL::character varying,
+	joint_loan_flag varchar(1) default NULL::character varying,
+	txn_channel varchar(23) default NULL::character varying,
+	create_time timestamp not null,
+	last_update_time timestamp not null,
+	delq_detl_amount_due numeric(11,2),
+	delq_intr_amount_due numeric(11,2),
+	delq_fee_amount_due numeric(11,2),
+	real_channel varchar(23) not null
+);
+
+
+
